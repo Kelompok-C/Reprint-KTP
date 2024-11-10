@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permohonan Cetak Ulang KTP-el</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="asset/Seal_of_the_Ministry_of_Internal_Affairs_of_the_Republic_of_Indonesia_(2020_version).svg.png" alt="Logo Disdukcapil">
+        </div>
+        <h1>Permohonan Cetak Ulang KTP-el Hilang/Rusak</h1>
+        <form id="ktpForm" action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="full_name">Nama Lengkap</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="nik">NIK</label>
+                <input type="text" id="nik" name="nik" maxlength="16" required>
+            </div>
+            <div class="form-group">
+                <label for="birth_date">Tanggal Lahir</label>
+                <input type="date" id="birth_date" name="birth_date" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Nomor Telepon</label>
+                <input type="tel" id="phone_number" name="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="request_type">Jenis Permohonan</label>
+                <select id="request_type" name="request_type" required>
+                    <option value="">Pilih Jenis Permohonan</option>
+                    <option value="Rusak/Perubahan Data">Cetak Ulang Karena Rusak/Perubahan Data</option>
+                    <option value="Hilang">Cetak Ulang Karena Hilang</option>
+                </select>
+            </div>
+            <div id="additionalFields"></div>
+            <button type="submit">Kirim Permohonan</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
